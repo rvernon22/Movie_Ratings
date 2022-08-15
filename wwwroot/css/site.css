@@ -1,0 +1,23 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    color: #3143aa;
+    /*display: flex;
+    justify-content content: center;
+    align-content items: center;
+        */
+    margin-bottom: 60px;
+    background-color: #eef;
+}

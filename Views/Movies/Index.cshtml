@@ -1,0 +1,107 @@
+﻿@model IEnumerable<MovieRatings.Models.Movies>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Summary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlotGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlotDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CineGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CineDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MusicGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MusicDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActingGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActingDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VFXGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VFXDesc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Summary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlotGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlotDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CineGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CineDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MusicGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MusicDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActingGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActingDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VFXGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VFXDesc)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
